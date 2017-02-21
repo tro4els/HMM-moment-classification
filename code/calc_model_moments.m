@@ -1,9 +1,21 @@
 function [P123_model] = calc_model_moments(O, T, PI, maxNN)
-% 
-% O: [K x S] observation probability matrix
-% T: [S x S] transition probability matrix
-% PI: [S x 1] initial state probability vector
-% maxNN >= 1 (integer) position (inclusive) at which the Markov chain is assumed stationary
+%
+% Inputs:
+%   O: [K x S] observation probability matrix
+%   T: [S x S] transition probability matrix
+%   PI: [S x 1] initial state probability vector
+%   maxNN >= 1 (integer) position (inclusive) at which the Markov chain is assumed stationary
+%
+% Outputs:
+%   P123_model: [K,K,K,maxNN] tensor of theoretical third order moments due
+%   to model parameters
+%
+% Rasmus Troelsgaard, rast@dtu.dk
+% Department of Applied Mathematics and Computer Science
+% Technical University of Denmark
+%
+%
+
 
 [K,S] = size(O);
 

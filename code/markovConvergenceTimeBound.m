@@ -1,4 +1,21 @@
 function [tbound,pi0] = markovConvergenceTimeBound(T,PI,epsilon)
+%
+% Calculates upper bound on convergence time given an upper limit on the
+% total variation distance from the stationary distribution.
+%
+% Inputs:
+%   T: Transition probability matrix. Size: S x S
+%   PI: Initial state probability vector. Size: 1 x S
+%
+% Outputs:
+%   tbound: time step at which convergence criterion is met
+%   pi0: stationary distribution of the Markov chain
+%
+%
+% Rasmus Troelsgaard, rast@dtu.dk
+% Department of Applied Mathematics and Computer Science
+% Technical University of Denmark
+%
 
 S=size(T,1);
 if S==1 % special case: no dynamics, just mixture model

@@ -1,4 +1,13 @@
 function y = my_hmmgenerate(seqLengths,T,O,PI)
+%
+% Wrapper for two functions producing samples from HMMs.
+% ! Check if speed-up also applies on your on machine !
+%
+% Rasmus Troelsgaard, rast@dtu.dk
+% Department of Applied Mathematics and Computer Science
+% Technical University of Denmark
+%
+%
 
 if any(seqLengths<1)
     error('encountered sequence length shorter than 1 symbol. Exiting');

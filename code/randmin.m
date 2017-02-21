@@ -1,9 +1,11 @@
 function [M,i] = randmin(x,y,dim)
-%finds and returns the minimum of a matrix and its index.
+% Finds and returns the minimum of a matrix and its index.
 % Differs from standard min() in that it chooses randomly among multiple
-% identical values. Thus the indices i can differ from run to run
+% identical values. Thus the indices i can differ from run to run.
 %
 % Rasmus Troelsgaard, rast@dtu.dk
+% Department of Applied Mathematics and Computer Science
+% Technical University of Denmark
 %
 
 if nargin < 2

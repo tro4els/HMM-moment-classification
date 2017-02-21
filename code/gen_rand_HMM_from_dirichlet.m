@@ -1,5 +1,24 @@
 function [T,O,PI] =  gen_rand_HMM_from_dirichlet(K,S,Tdiag,vinter,Osparsity,PI_base)
 %
+% Generate parameters of an HMM with discrete observations
+%
+% inputs:
+%   K: size of observation space (number of symbols)
+%   S: size of state space
+%   Tdiag: mean value of diagonal elements
+%   vinter: ]0;1] parameter controlling the variance of the dirichlet distributions to
+%           sample from. It specifies the interpolation between no variance and
+%           maximum variance given Tdiag
+%
+% Outputs:
+%   T: Transition probability matrix. Size: S x S
+%   O: Observation probability matrix. Size: K x S
+%   PI: Initial state probability vector. Size: 1 x S
+%
+%
+% Rasmus Troelsgaard, rast@dtu.dk
+% Department of Applied Mathematics and Computer Science
+% Technical University of Denmark
 %
 if nargin<6
    PI_base = ones(1,S)/S; 
